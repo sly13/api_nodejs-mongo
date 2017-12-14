@@ -4,8 +4,10 @@ var MongoClient = require("mongodb").MongoClient;
 var ObjectID = require("mongodb").ObjectID;
 var db = require("./db");
 var artistsController = require("./controllers/artists");
+var cors = require("cors");
 
 var app = express();
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
